@@ -1,13 +1,17 @@
 package ac.za.cput.adp3.xyzcongolmerate.factory.demography;
 
+import ac.za.cput.adp3.xyzcongolmerate.domain.demography.Gender;
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class GenderFactoryTest {
 
+    Gender gender = GenderFactory.buildGender("Male");
+
     @Test
     public void buildGender() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Assert.assertNotNull(gender.getGenderId());
+        Assert.assertNotNull(gender);
+
     }
 }
